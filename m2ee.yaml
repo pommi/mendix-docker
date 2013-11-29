@@ -1,0 +1,27 @@
+mxnode:
+ mxjar_repo: [/home/mendix/runtimes/]
+m2ee:
+ app_name: Mendix Project
+ app_base: /home/mendix
+ admin_port: 9000
+ admin_pass: mendix!
+ runtime_port: 8000
+ javaopts: [
+   "-Dfile.encoding=UTF-8", "-XX:MaxPermSize=128M", "-Xmx512M", "-Xms512M",
+   "-Djava.io.tmpdir=/home/mendix/tmp",
+ ]
+ logfile: /home/mendix/log/m2ee.log
+logging:
+ - # example of file logging by the platform itself
+   name: FileSubscriber
+   type: file
+   autosubscribe: INFO
+   filename: /home/mendix/log/app.log
+   max_size: 10485760 # bytes(!!)
+   max_rotation: 7
+mxruntime:
+ DatabaseType: PostgreSQL
+ DatabaseHost: "127.0.0.1:5432"
+ DatabaseName: mendix
+ DatabaseUserName: mendix
+ DatabasePassword: mendix

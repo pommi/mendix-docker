@@ -1,0 +1,3 @@
+deb http://cdn.debian.net/debian wheezy main
+deb http://packages.mendix.com/platform/debian/ wheezy-proposed-updates main contrib non-free
+deb http://packages.mendix.com/debian/ wheezy main contrib non-free
