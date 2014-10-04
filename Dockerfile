@@ -2,7 +2,7 @@
 #
 # VERSION               0.1
 
-FROM mendix/wheezy
+FROM debian:latest
 MAINTAINER Pim van den Berg <pim.van.den.berg@mendix.com>
 
 RUN useradd -m mendix
