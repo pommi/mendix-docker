@@ -13,7 +13,7 @@ RUN wget -qO - http://packages.mendix.com/mendix-debian-archive-key.asc | apt-ke
 ADD sources.list /etc/apt/sources.list
 
 RUN apt-get update
-RUN apt-get install -y --no-install-recommends python-m2ee oracle-j2re1.6 nginx python-flask postgresql-client
+RUN apt-get install -y --no-install-recommends python-m2ee openjdk-7-jre-headless nginx python-flask postgresql-client
 RUN apt-get clean
 
 RUN cd /home/mendix; mkdir -p .m2ee runtimes log data data/files data/model-upload data/database model web tmp
