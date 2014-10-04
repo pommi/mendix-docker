@@ -1,6 +1,6 @@
 # Dockerfile
 #
-# VERSION               0.1
+# VERSION               0.2
 
 FROM debian:latest
 MAINTAINER Pim van den Berg <pim.van.den.berg@mendix.com>
