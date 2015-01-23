@@ -21,7 +21,7 @@ logging:
    max_rotation: 7
 mxruntime:
  DatabaseType: PostgreSQL
- DatabaseHost: "127.0.0.1:5432"
- DatabaseName: mendix
+ DatabaseHost: "db:5432"
+ DatabaseName: postgres
  DatabaseUserName: mendix
  DatabasePassword: mendix
