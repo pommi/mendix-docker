@@ -1,0 +1,18 @@
+app:
+  image: mendix-docker
+  volumes:
+    - ./model-upload/:/home/mendix/data/model-upload/
+  ports:
+    - 5000:5000
+    - 7000:7000
+  links:
+    - db:db
+
+db:
+  image: postgres
+  ports:
+    - 5432:5432
+  environment:
+    - POSTGRES_USER=mendix
+    - POSTGRES_PASSWORD=mendix 
+
