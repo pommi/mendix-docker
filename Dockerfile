@@ -16,5 +16,7 @@ ADD m2ee.yaml /srv/mendix/.m2ee/m2ee.yaml
 
 RUN chown -R mendix:mendix /srv/mendix
 
+VOLUME /srv/mendix/data
+
 EXPOSE 8000
 CMD ["/bin/su", "mendix", "-c", "/bin/bash"]
