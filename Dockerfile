@@ -10,9 +10,7 @@ RUN useradd -m mendix
 RUN apt-key adv --fetch-keys http://packages.mendix.com/mendix-debian-archive-key.asc
 ADD sources.list /etc/apt/sources.list
 
-RUN apt-get update
-RUN apt-get install -y --no-install-recommends python-m2ee openjdk-7-jre-headless nginx python-flask postgresql-client
-RUN apt-get clean
+RUN apt-get update && apt-get install -y --no-install-recommends python-m2ee openjdk-7-jre-headless nginx python-flask postgresql-client procps vim-nox && apt-get clean
 
 RUN cd /home/mendix; mkdir -p .m2ee runtimes log data data/files data/model-upload data/database model web tmp
 
