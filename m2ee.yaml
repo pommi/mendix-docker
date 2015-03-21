@@ -1,23 +1,23 @@
 mxnode:
- mxjar_repo: [/home/mendix/runtimes/]
+ mxjar_repo: [/srv/mendix/runtimes/]
 m2ee:
  app_name: Mendix Project
- app_base: /home/mendix
+ app_base: /srv/mendix
  admin_port: 9000
  admin_pass: mendix!
  runtime_port: 8000
  runtime_listen_addresses: "::"
  javaopts: [
    "-Dfile.encoding=UTF-8", "-XX:MaxPermSize=128M", "-Xmx512M", "-Xms512M",
-   "-Djava.io.tmpdir=/home/mendix/tmp",
+   "-Djava.io.tmpdir=/srv/mendix/tmp",
  ]
- logfile: /home/mendix/log/m2ee.log
+ logfile: /srv/mendix/log/m2ee.log
 logging:
  - # example of file logging by the platform itself
    name: FileSubscriber
    type: file
    autosubscribe: INFO
-   filename: /home/mendix/log/app.log
+   filename: /srv/mendix/log/app.log
    max_size: 10485760 # bytes(!!)
    max_rotation: 7
 mxruntime:
