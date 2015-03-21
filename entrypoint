@@ -1,0 +1,13 @@
+#!/bin/bash
+set -e
+
+if [ "$1" = "setup" ]; then
+	cd "$MXDATA"
+	mkdir -p database files model-upload log tmp
+
+	chown -R mendix: "$MXDATA"
+
+	exec /bin/bash
+fi
+
+exec "$@"
