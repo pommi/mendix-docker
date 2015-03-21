@@ -7,9 +7,7 @@ MAINTAINER Pim van den Berg <pim.van.den.berg@mendix.com>
 
 RUN useradd -m mendix
 
-RUN apt-get update && apt-get install -y --no-install-recommends wget
-RUN wget -qO - http://packages.mendix.com/mendix-debian-archive-key.asc | apt-key add -
-
+RUN apt-key adv --fetch-keys http://packages.mendix.com/mendix-debian-archive-key.asc
 ADD sources.list /etc/apt/sources.list
 
 RUN apt-get update
