@@ -9,15 +9,15 @@ m2ee:
  runtime_listen_addresses: "::"
  javaopts: [
    "-Dfile.encoding=UTF-8", "-XX:MaxPermSize=128M", "-Xmx512M", "-Xms512M",
-   "-Djava.io.tmpdir=/srv/mendix/tmp",
+   "-Djava.io.tmpdir=/srv/mendix/data/tmp",
  ]
- logfile: /srv/mendix/log/m2ee.log
+ logfile: /srv/mendix/data/log/m2ee.log
 logging:
  - # example of file logging by the platform itself
    name: FileSubscriber
    type: file
    autosubscribe: INFO
-   filename: /srv/mendix/log/app.log
+   filename: /srv/mendix/data/log/app.log
    max_size: 10485760 # bytes(!!)
    max_rotation: 7
 mxruntime:

@@ -10,7 +10,7 @@ RUN echo "deb http://packages.mendix.com/platform/debian/ wheezy main" > /etc/ap
 
 RUN apt-get update && apt-get install -y --no-install-recommends m2ee-tools openjdk-7-jre-headless postgresql-client procps vim-nox curl && apt-get clean
 
-RUN useradd -m mendix -b /srv && cd /srv/mendix; mkdir -p .m2ee runtimes log data data/files data/model-upload data/database model web tmp
+RUN useradd -m mendix -b /srv && cd /srv/mendix; mkdir .m2ee data model runtimes web; cd data; mkdir database files model-upload log tmp
 
 ADD m2ee.yaml /srv/mendix/.m2ee/m2ee.yaml
 
