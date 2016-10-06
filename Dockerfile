@@ -1,6 +1,6 @@
 # Dockerfile
 #
-# VERSION               0.3
+# VERSION               0.4
 
 FROM debian:jessie-backports
 MAINTAINER Pim van den Berg <pim.van.den.berg@mendix.com>
