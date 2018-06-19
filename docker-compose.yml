@@ -1,0 +1,29 @@
+version: '3.3'
+
+services:
+   db:
+     container_name: mendix_db
+     image: postgres:9.6
+     volumes:
+       - db_data:/var/lib/postgresql
+     restart: always
+     environment:
+       POSTGRES_USER: mendix
+       POSTGRES_PASSWORD: mendix
+       POSTGRES_DB: mendix
+
+   app:
+     depends_on:
+       - db
+     container_name: mendix_app
+     build: .
+     image: mendix-docker
+     command: setup
+     stdin_open: true
+     volumes:
+       - ./data:/srv/mendix/data
+     ports:
+       - "8000/tcp"
+
+volumes:
+    db_data:

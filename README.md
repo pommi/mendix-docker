@@ -2,13 +2,12 @@ Docker setup files for Mendix
 
 ## build the image
 ```
-docker build --rm -t mendix-docker .
+docker-compose build
 ```
 
 ## run the image
 ```
-docker run --name mendix_db -e POSTGRES_USER=mendix -e POSTGRES_PASSWORD=mendix -d postgres
-docker run -i --name mendix_app -P --link mendix_db:db -v /path/to/local/data/folder:/srv/mendix/data -d mendix-docker setup
+docker-compose up -d
 ```
 
 ## start the App
