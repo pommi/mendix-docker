@@ -6,7 +6,7 @@ m2ee:
  admin_port: 9000
  admin_pass: mendix!
  runtime_port: 8000
- runtime_listen_addresses: "::"
+ runtime_listen_addresses: "*"
  javaopts: [
    "-Dfile.encoding=UTF-8", "-XX:MaxPermSize=128M", "-Xmx512M", "-Xms512M",
    "-Djava.io.tmpdir=/srv/mendix/data/tmp",
